@@ -1,1 +1,19 @@
+# serverless.yml
 
+service: my-service
+
+provider:
+  name: aws
+  runtime: nodejs18.x  # 최신 Node.js LTS 버전 사용
+
+functions:
+  getUsersProgress:
+    handler: src/getUsersProgress.getUsersProgress
+    events:
+      - http:
+          path: progress
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
