@@ -1,15 +1,18 @@
 {
-  "name": "nodejs",
+  "name": "newgpts240922",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "local": "serverless offline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^13.5.0"
+  },
   "dependencies": {
-    "@types/node": "^18.0.6"
+    "axios": "^1.6.8"
   }
 }
