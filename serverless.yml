@@ -4,7 +4,7 @@ service: my-service
 
 provider:
   name: aws
-  runtime: nodejs18.x  # 최신 Node.js LTS 버전 사용
+  runtime: nodejs18.x
 
 functions:
   getUsersProgress:
@@ -14,6 +14,10 @@ functions:
           path: progress
           method: get
           cors: true
+          request:
+            parameters:
+              querystrings:
+                courseId: false
 
 plugins:
   - serverless-offline
